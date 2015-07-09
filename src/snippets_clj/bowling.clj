@@ -21,8 +21,8 @@
   (apply + (take 2 rolls)))
 
 (defn frame-scores
-  "Given remaining pins, the current frame number, and accumulated score,
-  return the total score including strike and spare bonuses"
+  "Given remaining rolls, the current frame number, and accumulated score,
+  return the total score including strike and spare bonuses."
   [rolls frame score]
   (cond
     (> frame 10) 
@@ -39,7 +39,7 @@
 
 
 (defn bowling-score
-  "Return the score given a sequence with number of pins dropped for 
-  each roll in a one person bowling game"
+  "Given a sequence with the number of pins that was struck down for each roll
+  in a one person bowling game, return the total score."
   [rolls]
   (frame-scores rolls 1 0))
