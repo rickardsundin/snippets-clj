@@ -3,7 +3,7 @@
 (defn- divisible?
   "Return true if n is divisible by m"
   [n m]
-  (= (mod n m) 0))
+  (zero? (rem n m)))
 
 (defn- fb
   "Convert a number according to the fizzbuzz rules"
